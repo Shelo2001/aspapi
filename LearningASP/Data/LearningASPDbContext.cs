@@ -5,7 +5,7 @@ namespace LearningASP.Data
 {
     public class LearningASPDbContext : DbContext
     {
-        public LearningASPDbContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
+        public LearningASPDbContext(DbContextOptions<LearningASPDbContext> dbContextOptions) : base(dbContextOptions)
         {
 
         }

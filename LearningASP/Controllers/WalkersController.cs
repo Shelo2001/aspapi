@@ -4,6 +4,7 @@ using LearningASP.Models.DTO;
 using LearningASP.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace LearningASP.Controllers
 {
@@ -93,6 +94,11 @@ namespace LearningASP.Controllers
             }
 
             return Ok(walker);
+        }
+
+        private string GetDebuggerDisplay()
+        {
+            return ToString();
         }
     }
 }

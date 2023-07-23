@@ -76,3 +76,10 @@ C:\Users\shelia\source\repos\LearningASP\LearningASP\bin\Debug\net7.0\runtimes\w
 C:\Users\shelia\source\repos\LearningASP\LearningASP\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\shelia\source\repos\LearningASP\LearningASP\bin\Debug\net7.0\AutoMapper.dll
 C:\Users\shelia\source\repos\LearningASP\LearningASP\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\shelia\source\repos\LearningASP\LearningASP\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\shelia\source\repos\LearningASP\LearningASP\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\shelia\source\repos\LearningASP\LearningASP\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\shelia\source\repos\LearningASP\LearningASP\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\shelia\source\repos\LearningASP\LearningASP\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\shelia\source\repos\LearningASP\LearningASP\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\shelia\source\repos\LearningASP\LearningASP\bin\Debug\net7.0\Microsoft.Extensions.Options.dll

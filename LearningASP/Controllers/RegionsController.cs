@@ -4,6 +4,7 @@ using LearningASP.Data;
 using LearningASP.Models.Domain;
 using LearningASP.Models.DTO;
 using LearningASP.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,7 @@ namespace LearningASP.Controllers
     // https://localhost:port/api/regions
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class RegionsController : ControllerBase
     {
 
