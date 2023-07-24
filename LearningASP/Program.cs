@@ -24,6 +24,7 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("AuthConnectionSt
 
 builder.Services.AddScoped<IWalkRepository, SQLWalkRepository>();
 builder.Services.AddScoped<IRegionRepository, SQLRegionRepository>();
+builder.Services.AddScoped<ITokenRepository, TokenRepository>();
 
 builder.Services.AddAutoMapper(typeof(AutomapperProfile));
 
