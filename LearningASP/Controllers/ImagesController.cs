@@ -1,4 +1,6 @@
-﻿using LearningASP.Models.DTO;
+﻿using LearningASP.Models.Domain;
+using LearningASP.Models.DTO;
+using LearningASP.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +10,13 @@ namespace LearningASP.Controllers
     [ApiController]
     public class ImagesController : ControllerBase
     {
+        private readonly IIMageRepository iMageRepository;
+
+        public ImagesController(IIMageRepository iMageRepository)
+        {
+            this.iMageRepository = iMageRepository;
+        }
+
         [HttpPost]
         [Route("Upload")]
         public async Task<IActionResult> UploadImage([FromForm] UploadImageRequestDto request)
@@ -16,7 +25,18 @@ namespace LearningASP.Controllers
 
             if(ModelState.IsValid)
             {
+                var imageDomainModel = new Image
+                {
+                    File = request.File,
+                    FileExtension = Path.GetExtension(request.File.FileName),
+                    FileSizeInBytes = request.File.Length,
+                    FileDescription = request.FileDescription,
+                    FileName = request.FileName,
+                };
 
+                await iMageRepository.Upload(imageDomainModel);
+
+                return Ok(imageDomainModel);
             }
 
             return BadRequest(ModelState);
