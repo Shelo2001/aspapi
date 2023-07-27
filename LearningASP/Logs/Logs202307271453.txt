@@ -1,0 +1,35 @@
+2023-07-27 14:53:08.403 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7055/api/Regions application/json;+charset=utf-8 50
+2023-07-27 14:53:08.407 +04:00 [INF] Executing endpoint 'LearningASP.Controllers.RegionsController.CreateRegion (LearningASP)'
+2023-07-27 14:53:08.411 +04:00 [INF] Route matched with {action = "CreateRegion", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRegion(LearningASP.Models.DTO.AddRegionRequestDto) on controller LearningASP.Controllers.RegionsController (LearningASP).
+2023-07-27 14:53:08.510 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Regions] ([Id], [Code], [Name], [RegionImageUrl])
+VALUES (@p0, @p1, @p2, @p3);
+2023-07-27 14:53:08.522 +04:00 [INF] Executing CreatedAtActionResult, writing value of type 'LearningASP.Models.DTO.RegionDto'.
+2023-07-27 14:53:08.542 +04:00 [INF] Executed action LearningASP.Controllers.RegionsController.CreateRegion (LearningASP) in 129.3984ms
+2023-07-27 14:53:08.545 +04:00 [INF] Executed endpoint 'LearningASP.Controllers.RegionsController.CreateRegion (LearningASP)'
+2023-07-27 14:53:08.547 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7055/api/Regions application/json;+charset=utf-8 50 - 201 - application/json;+charset=utf-8 143.2244ms
+2023-07-27 14:53:08.557 +04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7055/api/Regions - -
+2023-07-27 14:53:08.558 +04:00 [INF] Executing endpoint 'LearningASP.Controllers.RegionsController.GetAll (LearningASP)'
+2023-07-27 14:53:08.560 +04:00 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller LearningASP.Controllers.RegionsController (LearningASP).
+2023-07-27 14:53:08.563 +04:00 [INF] Get All regions Action method invoked
+2023-07-27 14:53:08.566 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [Regions] AS [r]
+2023-07-27 14:53:08.568 +04:00 [INF] Finished Get All regions Action method with data: [{"Id":"b260312a-e08d-4477-f6cf-08db8e8d56e6","Code":"WLG","Name":"Wellington","RegionImageUrl":null},{"Id":"74e12a9f-d282-4dce-f6d0-08db8e8d56e6","Code":"VAR","Name":"Varketili","RegionImageUrl":null},{"Id":"a55f9792-e48d-47fd-5c24-08db8e8fa9de","Code":"VAK","Name":"Vake","RegionImageUrl":null},{"Id":"906cb139-415a-4bbb-a174-1a1faf9fb1f6","Code":"NSN","Name":"Nelson","RegionImageUrl":"https://images.pexels.com/photos/13918194/pexels-photo-13918194.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"},{"Id":"f7248fc3-2585-4efb-8d1d-1c555f4087f6","Code":"AKL","Name":"Auckland","RegionImageUrl":"https://images.pexels.com/photos/5169056/pexels-photo-5169056.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"},{"Id":"14ceba71-4b51-4777-9b17-46602cf66153","Code":"BOP","Name":"Bay Of Plenty","RegionImageUrl":null},{"Id":"6884f7d7-ad1f-4101-8df3-7a6fa7387d81","Code":"NTL","Name":"Northland","RegionImageUrl":null},{"Id":"f077a22e-4248-4bf6-b564-c7cf4e250263","Code":"STL","Name":"Southland","RegionImageUrl":null},{"Id":"cfa06ed2-bf65-4b65-93ed-c9d286ddb0de","Code":"WGN","Name":"Wellington","RegionImageUrl":"https://images.pexels.com/photos/4350631/pexels-photo-4350631.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"}]
+2023-07-27 14:53:08.572 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LearningASP.Models.DTO.RegionDto, LearningASP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-27 14:53:08.574 +04:00 [INF] Executed action LearningASP.Controllers.RegionsController.GetAll (LearningASP) in 11.11ms
+2023-07-27 14:53:08.575 +04:00 [INF] Executed endpoint 'LearningASP.Controllers.RegionsController.GetAll (LearningASP)'
+2023-07-27 14:53:08.577 +04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7055/api/Regions - - - 200 - application/json;+charset=utf-8 20.2782ms
+2023-07-27 14:53:10.634 +04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7055/api/Regions/a55f9792-e48d-47fd-5c24-08db8e8fa9de - -
+2023-07-27 14:53:10.635 +04:00 [INF] Executing endpoint 'LearningASP.Controllers.RegionsController.GetById (LearningASP)'
+2023-07-27 14:53:10.637 +04:00 [INF] Route matched with {action = "GetById", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller LearningASP.Controllers.RegionsController (LearningASP).
+2023-07-27 14:53:10.641 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [Regions] AS [r]
+WHERE [r].[Id] = @__get_Item_0
+2023-07-27 14:53:10.643 +04:00 [INF] Executing OkObjectResult, writing value of type 'LearningASP.Models.DTO.RegionDto'.
+2023-07-27 14:53:10.643 +04:00 [INF] Executed action LearningASP.Controllers.RegionsController.GetById (LearningASP) in 5.4361ms
+2023-07-27 14:53:10.644 +04:00 [INF] Executed endpoint 'LearningASP.Controllers.RegionsController.GetById (LearningASP)'
+2023-07-27 14:53:10.645 +04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7055/api/Regions/a55f9792-e48d-47fd-5c24-08db8e8fa9de - - - 200 - application/json;+charset=utf-8 11.5042ms

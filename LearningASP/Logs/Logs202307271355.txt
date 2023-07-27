@@ -1,0 +1,36 @@
+2023-07-27 13:55:00.142 +04:00 [INF] Now listening on: https://localhost:7055
+2023-07-27 13:55:00.161 +04:00 [INF] Now listening on: http://localhost:5208
+2023-07-27 13:55:00.164 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-27 13:55:00.181 +04:00 [INF] Hosting environment: Development
+2023-07-27 13:55:00.184 +04:00 [INF] Content root path: C:\Users\shelia\source\repos\LearningASP\LearningASP
+2023-07-27 13:55:01.707 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7055/swagger/index.html - -
+2023-07-27 13:55:01.975 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7055/swagger/index.html - - - 200 - text/html;charset=utf-8 268.6323ms
+2023-07-27 13:55:01.982 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7055/_framework/aspnetcore-browser-refresh.js - -
+2023-07-27 13:55:01.990 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7055/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 7.5185ms
+2023-07-27 13:55:02.089 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7055/_vs/browserLink - -
+2023-07-27 13:55:02.127 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7055/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 37.7614ms
+2023-07-27 13:55:02.286 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7055/swagger/v1/swagger.json - -
+2023-07-27 13:55:02.446 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7055/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 159.6435ms
+2023-07-27 13:55:35.256 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7055/swagger/index.html - -
+2023-07-27 13:55:35.267 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7055/swagger/index.html - - - 200 - text/html;charset=utf-8 10.6348ms
+2023-07-27 13:55:35.285 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7055/_vs/browserLink - -
+2023-07-27 13:55:35.285 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7055/_framework/aspnetcore-browser-refresh.js - -
+2023-07-27 13:55:35.291 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7055/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 5.7184ms
+2023-07-27 13:55:35.319 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7055/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 33.9991ms
+2023-07-27 13:55:35.370 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7055/swagger/v1/swagger.json - -
+2023-07-27 13:55:35.378 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7055/swagger/favicon-32x32.png - -
+2023-07-27 13:55:35.380 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7055/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 10.2721ms
+2023-07-27 13:55:35.388 +04:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-07-27 13:55:35.391 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7055/swagger/favicon-32x32.png - - - 200 628 image/png 13.0581ms
+2023-07-27 13:55:40.398 +04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7055/api/Regions - -
+2023-07-27 13:55:40.460 +04:00 [INF] Executing endpoint 'LearningASP.Controllers.RegionsController.GetAll (LearningASP)'
+2023-07-27 13:55:40.473 +04:00 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller LearningASP.Controllers.RegionsController (LearningASP).
+2023-07-27 13:55:40.659 +04:00 [INF] Get All regions Action method invoked
+2023-07-27 13:55:41.483 +04:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [Regions] AS [r]
+2023-07-27 13:55:41.552 +04:00 [INF] Finished Get All regions Action method with data: [{"Id":"906cb139-415a-4bbb-a174-1a1faf9fb1f6","Code":"NSN","Name":"Nelson","RegionImageUrl":"https://images.pexels.com/photos/13918194/pexels-photo-13918194.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"},{"Id":"f7248fc3-2585-4efb-8d1d-1c555f4087f6","Code":"AKL","Name":"Auckland","RegionImageUrl":"https://images.pexels.com/photos/5169056/pexels-photo-5169056.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"},{"Id":"14ceba71-4b51-4777-9b17-46602cf66153","Code":"BOP","Name":"Bay Of Plenty","RegionImageUrl":null},{"Id":"6884f7d7-ad1f-4101-8df3-7a6fa7387d81","Code":"NTL","Name":"Northland","RegionImageUrl":null},{"Id":"f077a22e-4248-4bf6-b564-c7cf4e250263","Code":"STL","Name":"Southland","RegionImageUrl":null},{"Id":"cfa06ed2-bf65-4b65-93ed-c9d286ddb0de","Code":"WGN","Name":"Wellington","RegionImageUrl":"https://images.pexels.com/photos/4350631/pexels-photo-4350631.jpeg?auto=compress\u0026cs=tinysrgb\u0026w=1260\u0026h=750\u0026dpr=1"}]
+2023-07-27 13:55:41.559 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LearningASP.Models.DTO.RegionDto, LearningASP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-27 13:55:41.572 +04:00 [INF] Executed action LearningASP.Controllers.RegionsController.GetAll (LearningASP) in 1094.7889ms
+2023-07-27 13:55:41.574 +04:00 [INF] Executed endpoint 'LearningASP.Controllers.RegionsController.GetAll (LearningASP)'
+2023-07-27 13:55:41.581 +04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7055/api/Regions - - - 200 - application/json;+charset=utf-8 1183.2544ms

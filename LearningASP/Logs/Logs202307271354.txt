@@ -1,0 +1,1 @@
+2023-07-27 13:54:59.889 +04:00 [INF] User profile is available. Using 'C:\Users\shelia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.

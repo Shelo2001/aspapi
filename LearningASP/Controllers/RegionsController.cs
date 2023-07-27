@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 
 namespace LearningASP.Controllers
 {
@@ -19,22 +20,26 @@ namespace LearningASP.Controllers
 
         private readonly IRegionRepository regionRepository;
         private readonly IMapper mapper;
+        private readonly ILogger logger;
 
-        public RegionsController(IRegionRepository regionRepository, IMapper mapper) { 
+        public RegionsController(IRegionRepository regionRepository, IMapper mapper, ILogger<RegionsController> logger) { 
             this.regionRepository = regionRepository;
             this.mapper = mapper;
+            this.logger = logger;
         }
 
 
         //GET ALL REGIONS
         //GET https://localhost:port/api/regions
         [HttpGet]
-        [Authorize(Roles = "Reader,Writer")]
+        /*[Authorize(Roles = "Reader,Writer")]*/
         public async Task<IActionResult> GetAll()
         {
+            logger.LogInformation("Get All regions Action method invoked");
             var regionsDomain = await regionRepository.GetAllAsync();
 
             var regionsDto = mapper.Map<List<RegionDto>>(regionsDomain);
+            logger.LogInformation($"Finished Get All regions Action method with data: {JsonSerializer.Serialize(regionsDomain)}" );
 
             return Ok(regionsDto);
         }
@@ -43,7 +48,7 @@ namespace LearningASP.Controllers
         //GET https://localhost:port/api/regions/id
         [HttpGet]
         [Route("{id:Guid}")]
-        [Authorize(Roles ="Reader,Writer")]
+        /*[Authorize(Roles ="Reader,Writer")]*/
         public async Task<IActionResult> GetById([FromRoute] Guid id)
         {
             var regionDomain = await regionRepository.GetByIdAsync(id);
@@ -65,7 +70,7 @@ namespace LearningASP.Controllers
         //POST https://localhost:port/api/regions
         [HttpPost]
         [ValidateModel]
-        [Authorize(Roles = "Writer")]
+        /*[Authorize(Roles = "Writer")]*/
 
         public async Task<IActionResult> CreateRegion([FromBody] AddRegionRequestDto addRegionRequestDto)
         {
@@ -87,7 +92,7 @@ namespace LearningASP.Controllers
         //PUT https://localhost:port/api/regions/id
         [HttpPut]
         [Route("{id:Guid}")]
-        [Authorize(Roles = "Writer")]
+        /*[Authorize(Roles = "Writer")]*/
         public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateRegionRequestDto updateRegionRequestDto)
         {
 
@@ -109,7 +114,7 @@ namespace LearningASP.Controllers
         //DELETE https://localhost:port/api/regions/id
         [HttpDelete]
         [Route("{id:Guid}")]
-        [Authorize(Roles = "Writer")]
+        /*[Authorize(Roles = "Writer")]*/
         public async Task<IActionResult> DeleteById([FromRoute] Guid id)
         {
             var regionDomain = await regionRepository.DeleteAsync(id);

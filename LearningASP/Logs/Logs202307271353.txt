@@ -1,0 +1,14 @@
+2023-07-27 13:53:28.354 +04:00 [INF] User profile is available. Using 'C:\Users\shelia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-27 13:53:28.690 +04:00 [INF] Now listening on: https://localhost:7055
+2023-07-27 13:53:28.696 +04:00 [INF] Now listening on: http://localhost:5208
+2023-07-27 13:53:28.698 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-27 13:53:28.700 +04:00 [INF] Hosting environment: Development
+2023-07-27 13:53:28.701 +04:00 [INF] Content root path: C:\Users\shelia\source\repos\LearningASP\LearningASP
+2023-07-27 13:53:30.246 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7055/swagger/index.html - -
+2023-07-27 13:53:30.529 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7055/swagger/index.html - - - 200 - text/html;charset=utf-8 284.3985ms
+2023-07-27 13:53:30.538 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7055/_framework/aspnetcore-browser-refresh.js - -
+2023-07-27 13:53:30.545 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7055/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 7.3606ms
+2023-07-27 13:53:30.628 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7055/_vs/browserLink - -
+2023-07-27 13:53:30.664 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7055/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 36.6446ms
+2023-07-27 13:53:30.813 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7055/swagger/v1/swagger.json - -
+2023-07-27 13:53:30.955 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7055/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 142.5121ms
